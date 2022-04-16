@@ -1,0 +1,32 @@
+html
+    head
+        link(rel='stylesheet', href='../static/style.css', type='text/css')
+        title Madhuban Valley Dance Academy
+    body
+        nav#navbar.top
+            ul
+                div#logo
+                    img(src="/static/img/logo.png", alt="")
+                li #[a(href='/') Home]
+                li #[a(href='/about') About]
+                li #[a(href='/contact') Contact]
+        section#introSection
+            div.intro
+                h3#big Madhuban Valley Dance Academy
+                p Eat. Sleep. Dance. Repeat.
+                a(href="/contact") Join us now!
+        
+        section#missionSection
+            h3 Our Motto
+            div.mission 
+                div.card#perf
+                    p  Dance Perfection
+                div.card#expert
+                    p  Expert Choreography 
+                div.card#posture
+                    p  Posture Resolution
+
+        footer 
+            | Copyright © 2022 | https://www.madhubanvda.com | All Rights Reserved 
+        script
+            include ../static/index.js

@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css2?family=Square+Peg&display=swap);
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    font-size: 1.6rem;
+    font-family: 'Square Peg';
+    /* background-color:#fca311; */
+    
+}
+
+
+#navbar ul{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    
+}
+
+#navbar li{
+    list-style: none;
+    padding: 20px;
+    background-color: black;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: white;
+    padding: 2px 30px;
+    background-color: black;   
+    transition: all ease-in-out 0.3s;
+    border-radius: 20px; 
+}
+#navbar li a:hover{
+    text-decoration: none;
+    color: black;
+    background-color: #fca311;
+    transition: all ease-in-out 0.2s;
+}
+#logo img{
+    width: 60px;
+    margin: 20;
+}
+
+.intro{
+    /* color: #14213d; */
+    padding: 50px 200px;
+    font-size: 2.2rem;
+    border: 2px ridge #fca2118c;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: all ease-in-out 0.3s;
+}
+.intro:hover{
+    color: #fca311;
+    
+    backdrop-filter: blur(15px);
+    transition: all ease-in-out 0.3s;
+    
+}
+.intro a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    border: 2px ridge #fca311;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 20px;
+}
+.intro a:hover{
+    color: black;
+    background-color: #fca311;
+    transition: all ease-in-out 0.3s;
+    
+}
+#big{
+    font-size: 2.8rem;
+    text-align: center;
+}
+#introSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: center / cover no-repeat url("./img/dance1.jpg");
+    height: 800px;
+    background-color: #14213d;
+}
+#missionSection{
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #121720;
+}
+#missionSection h3{
+    color: #fca311;
+    margin: 40px 1px 1px 1px;
+}
+.mission{
+    display: flex;
+}
+#perf{
+    background: center / cover no-repeat url("../static/img/perf.jpg");
+    
+}
+#expert{
+    background: center / cover no-repeat url("../static/img/expert.jpg");
+}
+#posture{
+    background: center / cover no-repeat url("../static/img/posture.jpg");
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin:  20px 20px 60px 20px;
+    width: 400px;
+    height: 240px;
+    border: 2px ridge #fca2118c;
+    border-radius: 20px;
+    
+    transition: all ease-in-out 0.3s;
+    backdrop-filter: blur(5px);    
+}
+.card p{
+    text-align: center;
+    /* display: none; */
+    color: #fca311;
+    border: 2px ridge #fca311;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(1px);
+    transition: all ease-in-out 0.3s;
+    background-color: rgba(22, 22, 22, 0.658);
+}
+
+.card p:hover{
+    color: #fca311;
+    backdrop-filter: blur(5px);
+    transition: all ease-in-out 0.3s;
+}
+
+footer{
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    
+}

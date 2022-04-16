@@ -1,0 +1,39 @@
+html
+    head
+        link(rel='stylesheet', href='../static/contact.css', type='text/css')
+        title Madhuban Valley Dance Academy
+    body
+        nav#navbar.top
+            ul
+                div#logo
+                    img(src="/static/img/logo.png", alt="")
+                li #[a(href='/') Home]
+                li #[a(href='/about') About]
+                li #[a(href='/contact') Contact]
+        div#contact-form
+            h2 Fill in your details in the form below to get a call-back from us!
+            div.form
+                form(action="/contact" method="post") 
+                    div 
+                        p Name: 
+                        input(type="text" class="myInput" name="name" placeholder="Enter your name")
+                    div 
+                        p Email: 
+                        input(type="email" class="myInput" name="email" placeholder="Enter your email")
+                    div 
+                        p Phone No.: 
+                        input(type="number" class="myInput" name="number" placeholder="Enter your number")
+                    div 
+                        p Address: 
+                        input(type="address" class="myInput" name="address" placeholder="Enter your address")
+                    div 
+                        p Message: 
+                        input(type="message" class="myInput" name="message" placeholder="Enter your message")
+                    div
+                        button.btn
+                            | Submit
+                    
+        footer 
+            | Copyright © 2022 | https://www.madhubanvda.com | All Rights Reserved
+        script
+            include ../static/index.js
