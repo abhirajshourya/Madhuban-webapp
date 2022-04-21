@@ -1,16 +1,19 @@
-var express = require('express')
+const express = require('express')
 const path = require('path')
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
+const port = 80;
 
 //MongoDB
 const mongoose = require('mongoose');
 const { type } = require('express/lib/response');
 
-main().catch(err => console.log(err));
 
-async function main() {
-    await mongoose.connect('mongodb://localhost:27017/test');
+async function mongoconnect() {
+    console.log("MongoDB Connecting...");
+    await mongoose.connect('mongodb+srv://madhuban:wlpctycUvtOaRlfI@cluster0.akfbv.mongodb.net/MadhubanApp?retryWrites=true&w=majority');
+    
 }
+mongoconnect().then(() => { console.log("Connected..!!"); }).catch(err => console.log(err));
 
 const contactSchema = new mongoose.Schema({
     name: String,
@@ -24,16 +27,12 @@ const contact = mongoose.model('contact', contactSchema);
 
 
 // Express specific
-var app = express()
+const app = express()
 
 app.use('/static', express.static('static'));
 
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-
-// parse application/json
 app.use(bodyParser.json())
-
 
 //Template engine with PUG
 app.set('view engine', 'pug');
@@ -59,12 +58,12 @@ app.get("/contact", (req, res) => {
 app.post("/contact", (req, res) => {
     res.status(200);
     console.log(req.body);
-    // let postreq = new contact(req.body)
-    // postreq.save()
-    // res.render("contact-success.pug")
-    res.send("Success")
+    let postreq = new contact(req.body)
+    postreq.save()
+    res.render("contact-success.pug")
 });
-const port = 80;
+
+//local host
 app.listen(port, () => {
     console.log(`Served on : 127.0.0.1:${port}`);
 });
